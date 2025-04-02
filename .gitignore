@@ -217,6 +217,17 @@ logs
 /debug
 cache
 
+# OpenHands specific
+memory/
+*.log
+*.gguf
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+models/
+
 # configuration
 config.toml
 config.toml_

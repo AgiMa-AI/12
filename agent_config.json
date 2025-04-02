@@ -1,0 +1,14 @@
+{
+  "model": "claude-3-opus-20240229",
+  "api_key": "dummy-key",
+  "use_local_model": true,
+  "local_model_path": "/workspace/OpenHands/models/dummy-model.gguf",
+  "temperature": 0.7,
+  "max_tokens": 4000,
+  "top_p": 0.9,
+  "top_k": 50,
+  "memory_path": "/workspace/OpenHands/memory",
+  "tool_timeout": 30,
+  "language": "zh-CN",
+  "system_prompt": "你是一个智能健康管家，专注于为用户提供健康相关的建议和信息。请使用自然、流畅的中文回答问题，避免使用机器翻译的生硬表达。你的回答应该简洁明了，易于理解，并且尊重用户的隐私。"
+}

@@ -35,3 +35,22 @@ try:
     __version__ = get_version()
 except Exception:
     __version__ = 'unknown'
+
+# Import LangChain Router integration
+try:
+    from openhands.langchain_router import LangChainRouter, RouterConfig
+    from openhands.langchain_router.integration import OpenHandsLangChainIntegration
+    
+    # Initialize the LangChain Router integration
+    langchain_router_integration = None
+    
+    def get_langchain_router():
+        global langchain_router_integration
+        if langchain_router_integration is None:
+            langchain_router_integration = OpenHandsLangChainIntegration()
+        return langchain_router_integration
+    
+except ImportError:
+    # LangChain Router is optional
+    def get_langchain_router():
+        raise ImportError("LangChain Router is not available. Install the required dependencies.")
